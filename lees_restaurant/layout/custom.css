@@ -1,0 +1,29 @@
+﻿body
+{
+}
+
+a {
+
+   text-decoration:none;
+
+}
+
+nav ul li a{
+
+    color:white;
+}
+
+nav ul li a:hover{
+
+    color:aliceblue;
+}
+
+footer ul li a{
+
+    color:#232323;
+}
+
+footer ul li a:hover{
+
+    color:#6d6c6c;
+}

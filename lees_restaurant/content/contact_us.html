@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Lee's Restaurant</title>
+
+    <link href="../layout/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../layout/custom.css" rel="stylesheet" type="text/css" />
+    <link href="../layout/contact.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+
+</head>
+<body style="color:#232323;">
+
+    <header style="height: 100px; background-color: #e8e8e1; width: 100%;margin:0px;padding:0px;padding-bottom:10px;">
+
+
+        <div style="width:33%;height:80px;margin-top:10px;margin-bottom:10px;float:left;">
+            <p style="margin-left:20px;font-size:30px;font-weight:700;">Lee's Restaurant</p>
+        </div>
+        <div style="width:66%;height:80px;margin-top:10px;float:right;">
+            <div style="width: 80px; height: 80px; float: right; background-color: #3a61de; margin-top: 5px; margin-right: 20px;">
+                <img src="../images/logo.jpg" style="width:80px;height:80px;" />
+            </div>
+        </div>
+
+
+
+    </header>
+
+
+    <nav style="color: white; margin: 0px;background-color: #232323; height: 50px; width: 100%;">
+
+        <ul style="margin:0px;padding-top:15px;margin-left:100px;">
+
+            <li style="float:left;margin-right:25px;"><a href="../index.html">Home</a></li>
+            <li style="float:left;margin-right:25px;"><a href="contact_us.html">Contact-Us</a></li>
+            <li style="float:left"><a href="products.html">Products</a></li>
+
+        </ul>
+
+    </nav>
+
+<!--  ----------------------------------------------------------------------   -->
+
+    <section style="border-top: 5px solid #3a61de; ">
+
+        <div style="width:45%;height:auto;clear:both;margin-top:35px;margin-left:10px;margin:0px auto;">
+
+            <div id="body_paragraph" style="margin-top:10px;display:inline-block;text-align:center;">
+                <h2>Arrange Reservations</h2>
+                <p style="line-height:1.5;color:#6d6c6c;">
+                    Send in this form and we will reserve a seat for you and/or your party! If no tables are available then please check back in about a half hour or
+                    choose to reserve a table for another day. Please check our <a href="products.html">products</a> page to see a small example menu of the food we
+                    prepare fresh daily. We look forward to hosting you and serving the best gourmet Chinese and French food in town!
+                </p>
+
+            </div>
+
+            <div id="wrapper_div" style="margin-top:35px;display:none;background-color:white;padding:10px;">
+                <h4>Please verify you have entered the correct information before submitting.</h4>
+                <p id="wrapper" style="text-align:center;"></p>
+                <p id="wrapper2" style="text-align:center;"></p>
+                <p id="wrapper3" style="text-align:center;"></p>
+                <p id="wrapper4" style="text-align:center;"></p>
+            </div>
+
+
+
+        </div>
+
+       
+
+        <div class="section_form" >
+
+            <!--  -----------------------------------------------------------------------------------------  -->
+            <!--  -----------------------------------------------------------------------------------------  -->
+
+            <div class="form_division">
+                <form id="form" action="form_submit.php" method="post" enctype="multipart/form-data" style="height:70%;width:100%">
+                    <div id="section_form" style="display:inline-block;width:100%;">
+                        <div style="width:100%;">
+                            <div style="width:50%;float:left;">
+                                <div style="margin-left:50px;">
+                                    <h3>Please enter the following requested items to reserve your seating.</h3>
+                                    <br />
+                                    <br />
+                                    <h4 style="margin-bottom:0px;margin-top:0px;">Name</h4><br />
+                                    <div>
+                                        <div style="width:50%;float:left;"><h5>First:</h5><input type="text" name="first_name" value="" style="float:left;" /></div>
+                                        <div style="width:50%;float:left;margin-left:-100px;"><h5>Last:</h5><input id="last_name" type="text" name="last_name" value="" style="float:left;" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div style="width:50%;float:left;">
+                                <div style="margin-left: 25px;">
+                                    <br />
+                                    <h4 style="margin-top:60px;margin-bottom:56px;">Phone Number:</h4><br />
+                                    <input id="phone" type="text" name="phone" style="width:230px;" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div style="width:100%;clear:both;">
+                            <div style="margin-top:50px;float:left;width:50%;">
+                                <div style="margin-left: 50px;">
+                                    <h4>Will you be hosting a party of 5 or more?</h4><br />
+                                    <input type="radio" id="party" name="party" value="yes">Yes
+                                    <br>
+                                    <input type="radio" id="party" name="party" value="no" checked>No
+                                </div>
+                            </div>
+                            <br />
+                            <div style="margin-top:31px;float:left;width:50%;">
+                                <div style="margin-left:25px;">
+                                    <h4 style="margin-bottom:43px;">Please select a currently available table below:</h4>
+                                    <select id="location" name="location">
+
+                                        <option>Table 8</option>
+                                        <option>Table 10</option>
+                                        <option>Table 21</option>
+                                        <option>Table 22</option>
+                                        <option>Table 41</option>
+                                        <option>Table 50</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    
+                        <input type="submit" value="Submit" id="submit" style="display:none;width:75px;height:25px;margin-left:380px;margin-top:20px;" />
+                        <input type="reset" onclick="restart_form()" value="Go Back" id="reset" style="display:none;width:75px;height:25px;margin-top:20px;" />
+                    
+                </form>
+                <button onclick="outputname()" id="verify" style="margin-top:30px;display:inline-block;margin-bottom:25px;margin-left:50px;">Verify Post</button>
+            </div>
+
+            <!--  -----------------------------------------------------------------------------------------  -->
+            <!--  -----------------------------------------------------------------------------------------  -->
+
+            
+
+            <!--  -----------------------------------------------------------------------------------------  -->
+            <!--  -----------------------------------------------------------------------------------------  -->
+
+            </div>
+
+    </section>
+
+<!--  -----------------------------------------------------------------------  -->
+
+    <footer style="clear:both;height:100%;margin-top:0px;padding:0px;">
+        <div style="width:100%;height:100%;">
+            <div style="width: 100%; height: 25px; background-color: #232323; border-top: 5px solid #3a61de;">
+
+            </div>
+            <div style="background-color:#e8e8e1;width:100%;height:132px;">
+                <div style="width:50%;height:100%;float:left;">
+                    <ul style="list-style:none;">
+                        <li style="margin-bottom:15px;"><a href="../index.html">Home</a></li>
+                        <li style="margin-bottom:15px;"><a href="contact_us.html">Contact-Us</a></li>
+                        <li style="margin-bottom:15px;"><a href="products.html">Products</a></li>
+                    </ul>
+                </div>
+                <div style="width:50%;height:100%;float:right;">
+                    <div style="width:100%;margin-top:35px;">
+                        <p style="width:50%;float:left;">&copy; Copyright 2015 Lee's Restaurant, LLC</p>
+                        <p style="width:50%;float:right;">Developed by: Christopher Hodges</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!--  -----------------------------------------------------------------------------------  -->
+
+    <script>
+
+        function outputname() {
+
+            var x, y, z, first_name, last_name, phone, company_name, company_address, location;
+            var submit, reset, verify, wrapper_div;
+
+            x = document.getElementById("form");
+            first_name = x.elements["first_name"].value;
+            last_name = x.elements["last_name"].value;
+            phone = x.elements["phone"].value;
+            party = x.elements["party"].value;
+            location = x.elements["location"].value;
+
+            
+            
+
+            if (first_name === '' | last_name === '' | phone === '' | party === '' | location === '') {
+                alert("Please fill in all fields!");
+                return false;
+            }
+            
+            else {
+                document.getElementById("wrapper").innerHTML = "Party host: " + first_name + "&nbsp" + last_name + "<br />";
+                document.getElementById("wrapper2").innerHTML = "Your phone number:" + "&nbsp" + phone + "<br />";
+                document.getElementById("wrapper3").innerHTML = "Party size 5+?:" + "&nbsp" + party + "<br />";
+                document.getElementById("wrapper4").innerHTML = "Table selected:" + "&nbsp" + location + "<br />";
+
+
+                submit = document.getElementById("submit");
+                reset = document.getElementById("reset");
+                verify = document.getElementById("verify");
+                wrapper_div = document.getElementById("wrapper_div");
+                y = document.getElementById("section_form");
+                z = document.getElementById("body_paragraph");
+
+                submit.style.display = "inline-block";
+                reset.style.display = "inline-block";
+                verify.style.display = "none";
+                wrapper_div.style.display = "block";
+                y.style.display = "none";
+                z.style.display = "none";
+                
+                return true;
+            }
+        }
+
+
+        function restart_form() {
+
+            var reset, submit, verify;
+
+            reset = document.getElementById("reset");
+            submit = document.getElementById("submit");
+            verify = document.getElementById("verify");
+            y = document.getElementById("section_form");
+            z = document.getElementById("body_paragraph");
+
+            reset.style.display = "none";
+            submit.style.display = "none";
+            verify.style.display = "inline-block";
+            y.style.display = "inline-block";
+            z.style.display = "inline-block";
+        }
+
+    </script>
+
+
+</body>
+</html>
